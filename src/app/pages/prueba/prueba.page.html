@@ -6,4 +6,23 @@
 
 <ion-content>
 
+<ion-button> HLA </ion-button>
+
+<ion-reorder-group (ionItemReorder) = "doReorder($event)" disabled="false">
+  <ion-item>
+    <ion-reorder slot="start"></ion-reorder>
+    <ion-label>
+      ITEM 1
+    </ion-label>
+  </ion-item>
+</ion-reorder-group>
+<ion-reorder-group (ionItemReorder) = "doReorder($event)" disabled="false">
+  <ion-item>
+    <ion-reorder slot="start"></ion-reorder>
+    <ion-label>
+      ITEM 1 LISTA 2
+    </ion-label>
+  </ion-item>
+</ion-reorder-group>
+
 </ion-content>

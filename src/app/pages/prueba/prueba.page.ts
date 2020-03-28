@@ -12,4 +12,9 @@ export class PruebaPage implements OnInit {
   ngOnInit() {
   }
 
+
+  doReorder($event) {
+    
+  }
+
 }
