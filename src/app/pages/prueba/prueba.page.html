@@ -36,9 +36,16 @@
   <ion-col size="6" class="q1">
     <div class="q-header"> Do </div>
     <ion-list dragula="bag" [(dragulaModel)]="q1" lines="none">
-      <ion-item *ngFor="let item of q1" [color]="item.color" expand="block" textwrap>
-        {{ item.value }}
-      </ion-item>
+      <ion-card *ngFor="let item of q1" [color]="item.color" expand="block" textwrap (click)="click()">
+        <ion-card-header>
+          <ion-item>
+            1 Core  {{item.value}}
+          </ion-item>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-input [(ngModel)]="item.color" ></ion-input>
+        </ion-card-content>
+      </ion-card>
     </ion-list>
   </ion-col>
   

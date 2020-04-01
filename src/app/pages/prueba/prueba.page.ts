@@ -33,7 +33,7 @@ export class PruebaPage implements OnInit {
   constructor(private dragulaService: DragulaService, private toastController: ToastController) {
     this.dragulaService.drag('bag').subscribe(
       ({name, el , source}) => {
-        el.setAttribute('color', 'danger');
+        //el.setAttribute('color', 'danger');
       }
     );
 
@@ -47,8 +47,7 @@ export class PruebaPage implements OnInit {
     );
 
     this.dragulaService.dropModel('bag').subscribe(
-      ({item}) => {
-        item.color = 'success';
+      (X) => {
       }
     );
 
@@ -77,6 +76,10 @@ export class PruebaPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  click() {
+    console.log('Click');
   }
 
 }
