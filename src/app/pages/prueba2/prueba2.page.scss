@@ -1,8 +1,17 @@
+
+
+
 .h100 {
     height: 100%;
 }
 
-#col1 {
-    background-color: red;
-    border-radius: 0.5rem;
+.columna{
+    border-radius: 0.1rem;
+    margin: 0 0.2rem ;
+    &:nth-child(2n + 1) {
+        background-color: grey;
+    }
+    &:nth-child(2n) {
+        background-color: lightgrey
+    }
 }
