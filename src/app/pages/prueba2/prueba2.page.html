@@ -7,21 +7,21 @@
 <ion-content scrollX=true>
   <ion-grid class="ion-align-items-stretch h100">
     <ion-row class="ion-nowrap h100">
-      <ion-col size="3" *ngFor="let i of [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9]" id="col{{i}}" class="columna" >
-        <ion-item  color="transparent">
+      <ion-col size="3" *ngFor="let elemList of listOfLists" id="col{{i}}" class="columna" >
+        <ion-item color="transparent">
             <h2>
-              Columna
+              {{elemList.title}}
             </h2>
         </ion-item>
         <ion-list class="lista-trasparente scroll hueco">
-          <ion-card *ngFor="let i of [1,2,3,4,5,6,7,8]">
+          <ion-card *ngFor="let elemCard of elemList.list">
             <ion-card-header>
               <ion-card-title>
-                HOLAA
+                {{ elemCard.title }}
               </ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              Soy el contenido de la carta
+              {{ elemCard.description }}
             </ion-card-content>
           </ion-card>
         </ion-list>
