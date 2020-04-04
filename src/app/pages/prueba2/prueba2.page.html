@@ -1,10 +1,10 @@
-<ion-header>
+<ion-header *ngIf="board">
   <ion-toolbar>
     <ion-title>{{ board.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content scrollX=true>
+<ion-content scrollX=true *ngIf="board">
   <ion-grid class="ion-align-items-stretch h100">
     <ion-row class="ion-nowrap h100">
       <ion-col size="4" *ngFor="let elemList of board.content" class="columna" >

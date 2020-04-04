@@ -10,13 +10,19 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { DragulaModule } from 'ng2-dragula';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-    DragulaModule.forRoot()],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    DragulaModule.forRoot(),
+    HttpClientModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,
