@@ -20,13 +20,17 @@
     background-color: transparent;
 }
 
+.lista-aclarada {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 .scroll {
     height: auto;
     overflow-x: auto;
     overflow-y: auto;
 }
 
-.hueco {
+.ajustar-lista {
     height: calc(100% - 67px);
     width: 100%;
 }

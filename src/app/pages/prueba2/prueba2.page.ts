@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from 'src/app/model/card';
 import { ListOfCards } from 'src/app/model/listOfCards';
+import { Board } from 'src/app/model/board';
 
 @Component({
   selector: 'app-prueba2',
@@ -8,6 +9,7 @@ import { ListOfCards } from 'src/app/model/listOfCards';
   styleUrls: ['./prueba2.page.scss'],
 })
 export class Prueba2Page implements OnInit {
+  board: Board;
   listOfLists: ListOfCards[];
   list: ListOfCards;
   constructor() {
@@ -31,6 +33,8 @@ export class Prueba2Page implements OnInit {
       new Card('Tarjeta99', 'Buena descripcion')
     ]);
     this.listOfLists = [ this.list, list2 ];
+
+    this.board = new Board('Tablero de pruebas', this.listOfLists);
   }
 
 }
